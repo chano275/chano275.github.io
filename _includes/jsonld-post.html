@@ -1,0 +1,42 @@
+<script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "BlogPosting",
+    "url": "{{ site.url }}{{ page.url }}",
+    "name": {{ page.title | jsonify }},
+    "headline": {{ page.title | jsonify }},
+    "keywords": {{ page.tags | join: ',' | jsonify }},
+    "description": {{ page.description | trunctate:150 | strip_newlines | strip_html | jsonify }},
+    "datePublished": {{ page.date | jsonify }},
+    "dateModified": {{ page.date  | jsonify }},
+    "author": {
+      "@type": "Person",
+      "name": {{ site.name | jsonify }},
+      "email": {{ site.email | jsonify }},
+      "sameAs": [
+          "https://twitter.com/_shawndsilva",
+          "https://github.com/shawn-dsilva",
+          "https://linkedin.com/in/shawn-dsilva"
+      ]
+    },
+    "publisher": {
+      "@type": "Organization",
+      "name": {{ site.title | jsonify }},
+      "url": "{{ site.url }}",
+      "logo": {
+        "@type": "ImageObject",
+        "width": 32,
+        "height": 32,
+        "url": "{{ site.url }}/favicon.ico"
+      }
+    },
+    "mainEntityOfPage": {
+      "@type": "WebPage",
+      "@id": "{{ site.url }}{{ page.url }}"
+    },
+    "image": {
+      "@type": "ImageObject",
+      "url": "{{ page.image | default: site.image }}"
+    }
+  }
+</script>

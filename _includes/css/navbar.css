@@ -1,0 +1,434 @@
+:root {
+    --main-nav-color: #2d3541;
+}
+
+#nav-display {
+  display:none;
+}
+.navbar {
+    top: 0;
+    position: fixed;
+    z-index: 1;
+    display: block;
+    width: 100%;
+    background-color: var(--main-nav-color);
+    color: white;
+    box-shadow: 0 5px 10px rgb(0, 0, 0,0.4);
+}
+
+.logo {
+    border:none;
+    padding-right: 1.5rem;
+}
+.nav-container {
+    text-align: center;
+    margin: 0 15%;
+}
+
+
+.navbar a {
+    color: white;
+}
+
+.title {
+    margin: 0;
+}
+
+.name {
+    display: none;
+}
+
+.hide {
+    display: none;
+}
+
+
+.title-navbar {
+    color: #fff;
+    text-align: center;
+    margin-top: 0;
+    font-size: 2rem;
+    padding: 0.5rem;
+    margin: 0;
+
+}
+
+.title-navbar a {
+    font-weight: 700;
+    font-family: 'Inter', sans-serif;
+}
+
+.collapsible-menu label {
+    display: block;
+    cursor: pointer;
+    background: url(/menu.png) no-repeat right center;
+    background-color: var(--main-nav-color);
+
+}
+
+/* input#menu {
+    display: none;
+} */
+
+.menu-icon {
+    position: absolute;
+    top: 0;
+    right: 0;
+    z-index: 2;
+    cursor: pointer;
+    width: 45px;
+    height: 45px;
+    opacity: 0;
+
+}
+
+.al-hamburger {
+    top: 0;
+    right: 0;
+    position: fixed;
+    width: 50px;
+    height: 50px;
+    background-color: var(--main-nav-color);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 0 8px
+
+}
+
+.al-hamburger > span {
+    position: relative;
+    flex: none;
+    width: 60%;
+    height: 3px;
+    background: #fff;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: all 0.4s ease;
+  }
+
+ .al-hamburger > span::before,
+.al-hamburger > span::after {
+  content: '';
+  position: absolute;
+  z-index: 1;
+  top: -10px;
+  width: 100%;
+  height: inherit;
+  background: inherit;
+}
+
+.al-hamburger > span::after {
+    top: 10px;
+  }
+
+
+.menu-icon:checked~.al-hamburger > span {
+    transform: rotate(135deg);
+  }
+
+  .menu-icon:checked~.al-hamburger > span:before,
+.menu-icon:checked~.al-hamburger > span:after {
+  top: 0;
+  transform: rotate(90deg);
+}
+
+
+.menu-content {
+    text-align: center;
+    overflow: hidden;
+    max-height: 0;
+    transition: all 0.5s ease;
+    background-color: var(--main-nav-color);
+    /* transition:  opacity 0.4s ease 0.4s; */
+}
+
+.menu-icon:checked~.menu-content {
+max-height: 100vh;
+    background-color: var(--main-nav-color);
+}
+
+
+
+.navbar-jhuml {
+    display: inline-block;
+    margin: 10px 0;
+    font-size: 20px;
+    color: white;
+    font-weight: 300;
+}
+
+.navbar-item {
+    display: inline-block;
+    margin: 10px 0;
+    font-size: 20px;
+    color: white;
+    font-weight: 500!important;
+}
+
+.navbar-item:hover {
+    /* color:var(--main-divider-color); */
+    border-bottom : 3px solid var(--main-link-color);
+    color:var(--main-link-color);
+}
+
+
+.comms {
+    display: none;
+}
+
+.comms-icons {
+    font-size: 30px;
+    display: inline-block;
+    margin-top: 13px;
+    padding-top: auto!important;
+    padding-bottom: 8px!important;
+
+    padding-left: 10px;
+    padding-right: 10px;
+}
+
+
+.center-nav {
+    display: inline-block;
+    text-align: left;
+}
+
+.web-presence {
+    display: block;
+    overflow: hidden;
+    text-align: center;
+    font-size: 18px;
+    color: white;
+    font-weight: 400;
+    text-transform: capitalize;
+}
+
+.web-presence:before,
+.web-presence:after {
+    color: white;
+    background-color: #fff;
+    content: "";
+    display: inline-block;
+    height: 3px;
+    position: relative;
+    vertical-align: middle;
+    width: 50%;
+}
+
+.web-presence:before {
+    color: white;
+    right: 0.5em;
+    margin-left: -50%;
+}
+
+.web-presence:after {
+    color: white;
+    left: 0.5em;
+    margin-right: -50%;
+}
+
+.footer {
+    padding-top: 2rem;
+    padding-bottom: 1rem;
+    font-size:18px;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    background-color: var(--main-nav-color);
+    color: white;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+}
+
+.footer>div {
+    text-align: center;
+}
+
+.comms-mobile {
+    height: 10%;
+}
+
+@media (min-width: 60em) {
+    #nav-display {
+        display:none;
+      }
+
+    .navbar {
+        top: 0;
+        position: fixed;
+        display: block;
+        width: 100%;
+        height: 3rem;
+        background-color: var(--main-nav-color);
+        color: white;
+    }
+
+    .logo {
+        height: 45;
+        width: 70;
+        padding-right: 1rem;
+    }
+
+    .nav-container {
+        display: flex;
+        padding:3px;
+        flex-direction: row;
+        text-align: left;
+        margin: 0 1%;
+    }
+
+    .title-navbar {
+        display: none;
+    }
+
+    .collapsible-menu label {
+        all: unset;
+        display: none;
+    }
+
+    input#menu {
+        all: unset;
+        display: none;
+    }
+
+    input:checked+label {
+        all: unset;
+        display: none;
+    }
+
+    .menu-content {
+        all: unset;
+        display: flex;
+    }
+
+    input:checked~.menu-content {
+        all: unset;
+    }
+
+
+    .name {
+        font-family: 'Inter', sans-serif;
+        display: flex;
+        padding-right: 1rem;
+        margin: 0;
+        font-size: 2rem;
+        font-weight: 900;
+        color: white;
+    }
+
+    .light {
+        font-weight: 200;
+    }
+    .navbar-item {
+        margin: 0;
+        padding: 10px 5px;
+        font-size: 16px;
+        color: white;
+        font-weight: 400;
+        margin: 0 7px!important;
+
+    }
+
+    .nav-icons {
+        font-size: 20px;
+    }
+
+    .al-hamburger {
+        display: none;
+    }
+
+    .navbar-jhuml {
+        display: none;
+    }
+
+    .comms-icons {
+        font-size: 23px;
+    }
+
+    /* .spacer {
+    padding-left:5rem;
+} */
+
+    .center-nav {
+        display: flex;
+    }
+
+    .web-presence {
+        display: none;
+    }
+
+    .comms {
+        margin-left: auto;
+        display: block;
+    }
+
+    .comms-mobile {
+        display: none;
+    }
+
+    .footer {
+        margin-top: 3rem;
+        padding-top: 2rem;
+        padding-bottom: 1rem;
+
+        bottom: 0;
+        left: 0;
+        width: 100%;
+        background-color: var(--main-nav-color);
+        color: white;
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        justify-content: center;
+    }
+
+  }
+
+@media (min-width: 80em) {
+
+    .nav-container {
+        padding:5px;
+        display: flex;
+        flex-direction: row;
+        text-align: left;
+        margin: 0 10%;
+    }
+
+}
+
+@media (min-width: 120em) {
+    .navbar {
+        height: 3.5rem;
+    }
+
+    .name {
+        font-family: 'Inter', sans-serif;
+        display: flex;
+        padding-right: 2rem;
+        margin: 0;
+        font-size: 2.3rem;
+        font-weight: 900;
+        color: white;
+    }
+
+
+    .navbar-item {
+        font-size: 22px;
+        color: white;
+        font-weight: 300;
+        padding:10px;
+    }
+
+    .nav-icons {
+        font-size: 20px;
+    }
+
+    .comms-icons {
+        font-size: 30px;
+        padding: 10px;
+    }
+}

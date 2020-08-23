@@ -1,0 +1,498 @@
+
+ :root {
+  --main-para-color: #1C1C1C;
+  --main-heading-color: #0A0A0A;
+  --main-link-color:  #5376f4;
+  --main-light-color: #3D3D3D;
+  --main-lead-color: white ; /*#c7c7c7*/
+
+}
+
+
+ body {
+  color: var(--main-para-color);
+  font-family: 'Inter', sans-serif;
+  font-weight: 400;
+  margin: 0;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+a {
+  color: var(--main-link-color);
+  font-weight: 400;
+  text-decoration: inherit;
+  transition: color 0.2s ease-out;
+}
+
+ b, strong, th {
+  font-weight: 700;
+  color: var(--main-heading-color);
+}
+
+h1, h2, h3, h4, h5, h6 {
+  font-family: 'Inter', sans-serif;
+  font-weight: 700;
+  margin-bottom: .5rem;
+  line-height: 1.25;
+  color: var(--main-heading-color);
+  text-rendering: optimizeLegibility;
+}
+h1 {
+  font-size: 1.8rem;
+}
+h2 {
+  margin-top: 1.5rem;
+  font-size: 1.5rem;
+}
+h3 {
+  /*margin-top: 1rem;*/
+  font-size: 1.5rem;
+  margin-bottom: 0.5em;
+  margin-top:0;
+
+}
+h4, h5, h6 {
+  margin-top: 1.5rem;
+  font-size: 1rem;
+}
+
+figcaption {
+  text-align: center;
+}
+
+.hr-posts {
+  font-family: monospace;
+  text-align: center;
+  line-height: 1px;
+  height:0;
+  font-size: 2rem;
+  border-color:var(--main-para-color);
+  margin: 2rem 1rem;
+  overflow: visible;
+  border-style:solid;
+}
+
+.hr-posts:after {
+  content: "< / >";
+  color: var(--main-para-color);
+  font-weight: 400;
+  font-family: sans-serif;
+  display: inline;
+  background-color: white;
+  padding: 0 0.5em;
+}
+
+
+code {
+  font-family: 'Fira Code', monospace;
+  background-color: rgba(148, 148, 148, 0.12);
+  color: var(--main-light-color);
+  border-radius: 2px;
+  font-size: 18px;
+  margin: 0 0.2em;
+  padding: 0.1em 0.3em;
+  font-weight: 400;
+
+}
+
+pre {
+  color: white;
+  background-color: #282c34;
+  border-radius: 2px;
+  font-size: 0.7em;
+  padding: 0.8em 1.2em;
+  white-space: pre-wrap;
+  font-family: 'Fira Code', monospace;
+}
+
+pre code {
+  background: initial;
+  color: inherit;
+  font-size: initial;
+  margin: initial;
+  padding: initial;
+  font-family: 'Fira Code', monospace;
+
+}
+
+
+.tags {
+  display:inline-block;
+  background-color: white;
+  border-color: #788cfd;
+  border-width: 2px;
+  color:#788cfd;
+  border-radius: 4px;
+  font-size: 1.2rem;
+  margin: 10px 2px;
+  padding: 5px 12px;
+  font-weight: 400;
+  border-style:solid;
+}
+
+.mini-tags {
+  display:inline-block;
+  background-color: white;
+  border-color: #788cfd;
+  border-width: 2px;
+  color:#788cfd;
+  border-style: solid;
+  border-radius: 4px;
+  font-size: 16px;
+  margin: 6px 2px;
+  padding: 2px 8px;
+  font-weight: 400;
+}
+
+.categories {
+  display:inline-block;
+  background-color: white;
+  border-color: #00c58a;
+  border-width: 2px;
+  color:#00c58a;
+  border-style:solid;
+  border-radius: 4px;
+  font-size: 20px;
+  margin: 0 0.2em;
+  padding: 0.1em 0.3em;
+  font-weight: 400;
+}
+
+.categories-main {
+  display:inline-block;
+  background-color: white;
+  border-color: #00c58a;
+  border-width: 2px;
+  color:#00c58a;
+  border-style:solid;
+  border-radius: 4px;
+  font-size: 1.6rem;
+  margin: 0 0.2em;
+  padding: 0.1em 0.3em;
+  font-weight: 400;
+}
+table {
+  border-spacing: 1px;
+  box-shadow: 0px 0px 0px 1px rgba(148, 148, 148, 0.16) inset;
+}
+
+tr:hover {
+  background: rgba(148, 148, 148, 0.06);
+}
+
+th, td {
+  box-shadow: 0px 0px 0px 1px rgba(148, 148, 148, 0.16);
+  padding: 0.5em 1em;
+  text-align: left;
+}
+/*
+* {
+  -webkit-box-sizing: border-box;
+     -moz-box-sizing: border-box;
+          box-sizing: border-box;
+} */
+
+
+@media (min-width: 38em) {
+  html {
+ /* font-size: 20px;  */
+  }
+}
+
+
+/* Body text */
+p {
+  font-family: 'Inter';
+  margin-top: 0;
+  margin-bottom: 1rem;
+  font-size:18px;
+  line-height: 1.65;
+
+}
+
+
+
+/* Lists */
+ul, ol, dl {
+  margin-top: 0;
+  margin-bottom: 1rem;
+}
+
+/* Quotes */
+blockquote {
+  padding: .5rem 1rem;
+  margin: .8rem 0;
+  color: #3d3d33;
+  border-left: 5px solid var(--main-link-color);
+  margin-left: .8rem;
+}
+blockquote p:last-child {
+  margin-bottom: 0;
+}
+@media (min-width: 30em) {
+  blockquote {
+    padding-right: 5rem;
+    padding-left: 1.25rem;
+  }
+}
+
+img {
+  display: block;
+  max-width: 100%;
+  margin: 0 auto;
+  text-align: center;
+}
+
+
+
+/*
+
+.container {
+  max-width: 38rem;
+  padding-left:  1rem;
+  padding-right: 1rem;
+  margin-left: 0;
+  margin-right: 0;
+
+} */
+
+.container {
+  max-width: 38rem;
+  margin-left: 0;
+  margin-right: 0;
+
+}
+
+
+.big-header {
+  font-size: 2.5rem;
+  font-weight: 700;
+  color:#282c34;
+  margin:0;
+}
+
+
+/* .intro-container {
+  text-align: center;
+  width:100%;
+  height:100%;
+}
+
+.date-icon {
+  font-size: 30px;
+}
+.intro {
+  display:inline-block;
+  text-align: left;
+}
+.intro p {
+  font-size: 25px;
+} */
+
+/*
+ * Posts and pages
+ *
+ * Each post is wrapped in `.post` and is used on default and post layouts. Each
+ * page is wrapped in `.page` and is only used on the page layout.
+ */
+
+.page,
+.post {
+  margin-bottom: 2em;
+}
+
+/* Blog post or page title */
+/*.page-title,*/
+.page-title {
+  font-family: 'Inter', sans-serif;
+  color: #282c34;
+  font-size: 2.5rem;
+  margin-bottom: 1rem;
+}
+
+/* Post title for a post and links to post on homepage */
+
+.post-title {
+  color: #282c34;
+ text-align: center;
+ font-family: 'Inter', sans-serif;
+ font-weight: 600;
+}
+
+.post-title-link a {
+  font-weight: 500;
+  color: var(--main-para-color);
+  font-size: 1.7rem;
+  font-family: 'Inter', sans-serif;
+}
+
+.post-title-link a:hover,
+.post-title-link a:focus {
+  border-bottom: 5px solid var(--main-para-color);
+}
+
+/* Post Dates for blog post and homepage */
+
+.post-date {
+  font-family: 'Inter', sans-serif;
+  text-align: left;
+  display: block;
+  margin-top: 1rem;
+  margin-bottom: 1rem;
+  color: var(--main-light-color);
+  font-weight: 400;
+}
+
+.post-date-homepage {
+  font-family: 'Inter', sans-serif;
+  text-align: left;
+  display: block;
+  margin-top: 0.5rem;
+  margin-bottom: 1.2rem;
+  color: var(--main-light-color);
+  font-weight: 400;
+
+}
+
+.archive a:hover,
+.archive a:focus {
+  text-decoration: underline;
+}
+.title a:hover,
+.title a:focus {
+  text-decoration: underline;
+}
+
+.page-title,
+.post-title {
+  margin-top: 0;
+}
+
+/* Readmore Button */
+
+.read-more {
+  background-color: white;
+  color: var(--main-title-color);
+  border-style:solid;
+  border-color: var(--main-title-color);
+  padding: 10px 18px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  /*border-bottom-right-radius: 10px;
+  border-top-right-radius: 10px;
+  border-bottom-left-radius: 10px;
+  border-top-left-radius: 10px;
+  -webkit-border-bottom-right-radius: 10px;
+  -webkit-border-top-right-radius: 10px;
+  -webkit-border-bottom-left-radius: 10px;
+  -webkit-border-left-radius: 10px;*/
+  font-size: 16px;
+  font-weight: 500;
+  margin: 16px 2px;
+  cursor: pointer;
+  border-style:solid;
+}
+
+.read-more:hover,
+.read-more:focus{
+  background-color: white;
+  color: var(--main-link-color);
+  border-style:solid;
+  border-color: var(--main-link-color);
+}
+
+.archive a {
+  font-family: 'Inter', sans-serif;
+  font-weight: 500;
+  font-size: 1.5rem;
+}
+
+/* Related posts */
+.related {
+  padding-bottom: 2rem;
+}
+.related-posts {
+  padding-left: 0;
+  list-style: none;
+}
+.related-posts h3 {
+  margin-top: 0;
+}
+.related-posts li small {
+  font-size: 75%;
+  color: #999;
+}
+.related-posts li a:hover {
+  color: var(--main-link-color);
+  text-decoration: none;
+}
+.related-posts li a:hover small {
+  color: inherit;
+}
+
+
+/*
+ * Pagination
+ *
+ * Super lightweight (HTML-wise) blog pagination. `span`s are provide for when
+ * there are no more previous or next posts to show.
+ */
+
+.pagination {
+  overflow: hidden; /* clearfix */
+  margin-left: -1rem;
+  margin-right: -1rem;
+  font-family: 'Helvetica Neue', Helvetica, Arial sans-serif;
+  color: #ccc;
+  text-align: center;
+}
+
+/* Pagination items can be `span`s or `a`s */
+.pagination-item {
+  display: block;
+  padding: 1rem;
+  border: 1px solid #eee;
+}
+.pagination-item:first-child {
+  margin-bottom: -1px;
+}
+
+/* Only provide a hover state for linked pagination items */
+a.pagination-item:hover {
+  background-color: #f5f5f5;
+}
+
+.devicon-large {
+  font-size:5rem;
+}
+
+.devicon-nodejs-plain-wordmark {
+  font-size:7rem;
+}
+
+.skills {
+  font-weight: 500;
+  font-size: 1.5rem;
+  color: var(--main-para-color)
+}
+@media (min-width: 30em) {
+  .pagination {
+    margin: 3rem 0;
+  }
+  .pagination-item {
+    float: left;
+    width: 50%;
+  }
+  .pagination-item:first-child {
+    margin-bottom: 0;
+    border-top-left-radius:    4px;
+    border-bottom-left-radius: 4px;
+  }
+  .pagination-item:last-child {
+    margin-left: -1px;
+    border-top-right-radius:    4px;
+    border-bottom-right-radius: 4px;
+  }
+}

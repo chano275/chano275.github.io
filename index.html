@@ -1,0 +1,79 @@
+---
+title: Home
+---
+<head>
+{% include head.html %}
+<link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+
+<!-- <meta property="og:title" content="Shawn D'silva Full Stack Web Developer, Designer and Programmer"> -->
+<!-- Open Graph Tags -->
+<meta property="og:title" content="Shawn D'silva">
+<meta property="og:url" content="https://www.shawndsilva.com/">
+<meta property="og:description" content="{{site.description}}">
+<meta property="og:image" content="https://i.imgur.com/2xmos5O.png">
+
+<!-- Twitter Card Tags -->
+<meta name="twitter:domain" content="Shawn D'silva">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:site" content="@_shawndsilva">
+<meta name="twitter:creator" content="@_shawndsilva">
+
+<script type="application/ld+json">
+  {
+  "@context": "http://schema.org",
+   "@type": "WebSite",
+   "keywords": "software engineering, react, nodejs, full stack web development, web design, javascript",
+   "url": "{{site.url}}",
+   "mainEntityOfPage": {
+      "@type": "WebPage",
+      "@id": "{{site.url}}"
+    },
+   "author": {
+      "@type": "Person",
+      "name": "{{site.name}}",
+      "email": "{{ site.email }}",
+      "url": "{{site.url}}",
+      "sameAs": [
+          "https://twitter.com/_shawndsilva",
+          "https://github.com/shawn-dsilva",
+          "https://linkedin.com/in/shawn-dsilva"
+      ]
+    }
+   }
+</script>
+
+</head>
+
+<body>
+      {% include intro-hero.html %}
+      {% include navbar-intro.html %}
+      <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
+
+      <script src="/public/js/script.js"></script>
+      <script src="/public/js/lazyLoading.js"></script>
+
+      <div class="master-container">
+        {% include short-about.html %}
+      </div>
+
+        <div  class="grey-section master-container">
+            {% include skills.html %}
+        </div>
+
+      <div class="master-container">
+        {% include projects.html %}
+      </div>
+
+          <div  class="grey-section master-container">
+              {% include blog.html %}
+          </div>
+
+<div class="master-container">
+      {% include contact.html %}
+    </div>
+
+  {% include footer.html %}
+  <script>
+    AOS.init({ duration: 1500});
+  </script>
+</body>

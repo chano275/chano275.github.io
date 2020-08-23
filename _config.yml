@@ -1,0 +1,58 @@
+# Dependencies
+markdown:         kramdown
+
+# Permalinks
+permalink:        /blog/:categories/:title:output_ext
+
+
+#relative_permalinks: true
+
+# Setup
+title: Shawn D'silva
+tagline: 'Full Stack Web Developer'
+subtagline: 'Embedded Systems Enthusiast'
+description:      'A Full Stack Web Developer, who is passionate about code, from Web Apps to Microcontroller Firmware and everything in between'
+name: Shawn D'silva
+logo: /favicon-32x32.png
+baseurl: /
+url: https://www.shawndsilva.com
+image: https://i.imgur.com/2xmos5O.png
+#Uncomment the below baseurl if on a local server and comment out the other #baseurl
+
+#Uncomment the below baseurl if deploying to GH-Pages and comment out the other baseurl
+#baseurl:           https://shawn-dsilva.github.io/
+
+
+social:
+  name:           "Shawn D'silva"
+  links:
+    - https://twitter.com/shawndsilva97
+    - https://www.linkedin.com/in/shawn-dsilva
+    - https://github.com/shawn-dsilva
+
+github:
+  repo:           https://github.com/shawn-dsilva
+
+
+collections:
+  projects:
+    output: true
+    permalink: /:collection/:name:output_ext
+
+
+author:
+  twitter: shawndsilva97
+
+twitter:
+  username: shawndsilva97
+  card: summary
+
+email:  shawn@shawndsilva.com
+
+# youtube: youtube.com/yourname
+
+linkedin: https://linkedin.com/in/shawn-dsilva
+
+resume: /public/assets/resume/resume.pdf
+
+twitter: https://twitter.com/shawndsilva97

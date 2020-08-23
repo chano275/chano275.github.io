@@ -1,0 +1,187 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<urlset
+      xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
+      xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+      xsi:schemaLocation="http://www.sitemaps.org/schemas/sitemap/0.9
+            http://www.sitemaps.org/schemas/sitemap/0.9/sitemap.xsd">
+<!-- created with Free Online Sitemap Generator www.xml-sitemaps.com -->
+
+
+<url>
+  <loc>https://shawndsilva.com/</loc>
+  <lastmod>2020-05-09T08:25:13+00:00</lastmod>
+  <priority>1.00</priority>
+</url>
+<url>
+  <loc>https://shawndsilva.com/public/assets/resume/resume.pdf</loc>
+  <lastmod>2020-05-09T08:25:13+00:00</lastmod>
+  <priority>0.80</priority>
+</url>
+<url>
+  <loc>https://shawndsilva.com/about/</loc>
+  <lastmod>2020-05-09T08:25:13+00:00</lastmod>
+  <priority>0.80</priority>
+</url>
+<url>
+  <loc>https://shawndsilva.com/projects/</loc>
+  <lastmod>2020-05-09T08:25:13+00:00</lastmod>
+  <priority>0.80</priority>
+</url>
+<url>
+  <loc>https://shawndsilva.com/blog/systems-administration-and-devops/Hosting-Multiple-Full-Stack-Web-Projects-On-One-VPS-Using-Nginx-And-Docker.html</loc>
+  <lastmod>2020-05-09T08:25:13+00:00</lastmod>
+  <priority>0.80</priority>
+</url>
+<url>
+  <loc>https://shawndsilva.com/blog/web-development/MERN-Sessions-Authentication-App-Part-1-Nodejs-and-Express-Backend.html</loc>
+  <lastmod>2020-05-09T08:25:13+00:00</lastmod>
+  <priority>0.80</priority>
+</url>
+<url>
+  <loc>https://shawndsilva.com/blog/embedded%20systems/Makefiles-for-Embedded-Systems.html</loc>
+  <lastmod>2020-05-09T08:25:13+00:00</lastmod>
+  <priority>0.80</priority>
+</url>
+<url>
+  <loc>https://shawndsilva.com/blog/</loc>
+  <lastmod>2020-05-09T08:25:13+00:00</lastmod>
+  <priority>0.80</priority>
+</url>
+<url>
+  <loc>https://shawndsilva.com/tags/</loc>
+  <lastmod>2020-05-09T08:25:13+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://shawndsilva.com/tags/Docker/</loc>
+  <lastmod>2020-05-09T08:25:13+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://shawndsilva.com/tags/Nginx/</loc>
+  <lastmod>2020-05-09T08:25:13+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://shawndsilva.com/tags/Linux/</loc>
+  <lastmod>2020-05-09T08:25:13+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://shawndsilva.com/tags/AWS/</loc>
+  <lastmod>2020-05-09T08:25:13+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://shawndsilva.com/tags/Backend/</loc>
+  <lastmod>2020-05-09T08:25:13+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://shawndsilva.com/tags/Nodejs/</loc>
+  <lastmod>2020-05-09T08:25:13+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://shawndsilva.com/tags/Express/</loc>
+  <lastmod>2020-05-09T08:25:13+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://shawndsilva.com/tags/MongoDB/</loc>
+  <lastmod>2020-05-09T08:25:13+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://shawndsilva.com/tags/REST-API/</loc>
+  <lastmod>2020-05-09T08:25:13+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://shawndsilva.com/tags/arm%20cortex-m/</loc>
+  <lastmod>2020-05-09T08:25:13+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://shawndsilva.com/tags/gcc/</loc>
+  <lastmod>2020-05-09T08:25:13+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://shawndsilva.com/tags/make/</loc>
+  <lastmod>2020-05-09T08:25:13+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://shawndsilva.com/tags/tm4c/</loc>
+  <lastmod>2020-05-09T08:25:13+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://shawndsilva.com/tags/microcontrollers/</loc>
+  <lastmod>2020-05-09T08:25:13+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://shawndsilva.com/tags/linux/</loc>
+  <lastmod>2020-05-09T08:25:13+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://shawndsilva.com/blog/embedded%20systems/Flashing-Firmware-to-ARM-microcontrollers-and-Debugging-using-OpenOCD.html</loc>
+  <lastmod>2020-05-09T08:25:13+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://shawndsilva.com/blog/systems-administration-and-devops/How-To-Migrate-MongoDB-documents-to-another-Server.html</loc>
+  <lastmod>2020-05-09T08:25:13+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://shawndsilva.com/blog/general/Asus-X510UNR-best-budget-Linux-laptop.html</loc>
+  <lastmod>2020-05-09T08:25:13+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://shawndsilva.com/blog/embedded%20systems/Writing-the-Startup-code-and-Linker-Script-for-the-TM4C-from-scratch.html</loc>
+  <lastmod>2020-05-09T08:25:13+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://shawndsilva.com/blog/embedded%20systems/Getting-Started-with-TM4C-Launchpad-On-Linux.html</loc>
+  <lastmod>2020-05-09T08:25:13+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://shawndsilva.com/tags/C/</loc>
+  <lastmod>2020-05-09T08:25:13+00:00</lastmod>
+  <priority>0.51</priority>
+</url>
+<url>
+  <loc>https://shawndsilva.com/tags/misc/</loc>
+  <lastmod>2020-05-09T08:25:13+00:00</lastmod>
+  <priority>0.51</priority>
+</url>
+<url>
+  <loc>https://shawndsilva.com/tags/hardware/</loc>
+  <lastmod>2020-05-09T08:25:13+00:00</lastmod>
+  <priority>0.51</priority>
+</url>
+<url>
+  <loc>https://shawndsilva.com/tags/mongodb/</loc>
+  <lastmod>2020-05-09T08:25:13+00:00</lastmod>
+  <priority>0.51</priority>
+</url>
+<url>
+  <loc>https://shawndsilva.com/tags/database/</loc>
+  <lastmod>2020-05-09T08:25:13+00:00</lastmod>
+  <priority>0.51</priority>
+</url>
+<url>
+  <loc>https://shawndsilva.com/tags/openOCD/</loc>
+  <lastmod>2020-05-09T08:25:13+00:00</lastmod>
+  <priority>0.51</priority>
+</url>
+
+
+</urlset>

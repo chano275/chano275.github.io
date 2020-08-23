@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en-us">
+<head>
+  {% include head.html %}
+
+  <script src="//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.11.0/highlight.min.js"></script>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.13.1/styles/atom-one-dark-reasonable.min.css">
+  <script>hljs.initHighlightingOnLoad();</script>
+  
+  <meta property="og:title" content="{{page.title}}">
+  <meta property="og:url" content="{{site.url}}{{page.url}}">
+  <meta property="og:description" content="{{page.description}}">
+  <meta property="og:image" content="{{page.image}}">
+
+  <meta name="twitter:domain" content="Shawn D'silva">
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:site" content="@_shawndsilva">
+  <meta name="twitter:creator" content="@_shawndsilva">
+
+  {% include jsonld-post.html %}
+
+</head>
+
+  <body>
+
+    {% include navbar.html %}
+
+    <div class="page-container">
+      <div class="page-content">
+      {{ content }}
+    </div>
+  </div>
+
+  {% include footer.html %}
+
+  </body>
+
+
+</html>

@@ -10,31 +10,34 @@ ul { list-style: disc inside; margin-top:1rem; }
 a { color:#0366d6; text-decoration:none; }
 a:hover { text-decoration:underline; }
 
-/* Social icons */
-.social-icons {
+/* 프로필 이미지 비율 유지 */
+.profile-img {
+  display: block;
+  width: 150px;
+  height: 150px;
+  border-radius: 50%;
+  object-fit: cover;
+  margin: 1rem auto;
+}
+
+/* Contact 아이콘 */
+.contact-icons {
   display: flex;
-  gap: 1rem;
+  gap: 2rem;
   justify-content: center;
   margin: 1rem 0 2rem;
 }
 
-.social-icons .icon {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  width: 48px;
-  height: 48px;
-  background: #e0e0e0;
-  border-radius: 50%;
-  color: #333;
+.contact-icons a {
   text-decoration: none;
-  transition: background 0.2s;
+  color: #333;
+  transition: color 0.2s;
 }
 
-.social-icons .icon:hover {
-  background: #c0c0c0;
+.contact-icons a:hover {
+  color: #0366d6;
 }
 
-.social-icons .icon i {
-  font-size: 1.2rem;
+.contact-icons i {
+  font-size: 3rem; /* 아이콘 크기 크게 */
 }

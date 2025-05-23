@@ -15,9 +15,11 @@
 
   <!-- Navigation -->
   <nav class="nav">
-    <a href="#hero" class="nav-logo">정찬호</a>
+    <a href="#hero" class="nav-logo">
+      <img src="assets/images/profile.jpg" alt="정찬호" class="nav-logo-img" />
+    </a>
     <div class="nav-links">
-      <a href="#contact-icons">Contact</a>
+      <!-- <a href="#contact-icons">Contact</a> -->
       <a href="#about">About</a>
       <a href="#projects">Projects</a>
       <a href="#skills">Skills</a>
@@ -60,8 +62,13 @@
   <section id="about" class="section about">
     <div class="container">
       <h2>About Me</h2>
+      <img
+        src="assets/images/profile.jpg"
+        alt="정찬호 프로필 사진"
+        class="profile-img"
+      />
       <p>
-        인프라 자동화와 무중단 배포를 사랑하는 DevOps 엔지니어입니다. <br />
+        인프라 자동화와 무중단 배포를 사랑하는 DevOps 엔지니어입니다.<br />
         Docker, Kubernetes, Jenkins 등을 활용해 파이프라인을 설계·운영해왔습니다.
       </p>
     </div>
@@ -93,38 +100,71 @@
     <div class="container">
       <h2>Skills &amp; Tools</h2>
       <div class="skills-grid">
+
         <div class="skill">
           <img src="assets/images/icons/docker.svg" alt="Docker" />
           <span>Docker</span>
+          <div class="skill-bar">
+            <div class="skill-level" style="width:85%;"></div>
+          </div>
         </div>
+
         <div class="skill">
           <img src="assets/images/icons/kubernetes.svg" alt="Kubernetes" />
           <span>Kubernetes</span>
+          <div class="skill-bar">
+            <div class="skill-level" style="width:75%;"></div>
+          </div>
         </div>
+
         <div class="skill">
           <img src="assets/images/icons/jenkins.svg" alt="Jenkins" />
           <span>Jenkins</span>
+          <div class="skill-bar">
+            <div class="skill-level" style="width:80%;"></div>
+          </div>
         </div>
+
         <div class="skill">
           <img src="assets/images/icons/grafana.svg" alt="Grafana" />
           <span>Grafana</span>
+          <div class="skill-bar">
+            <div class="skill-level" style="width:70%;"></div>
+          </div>
         </div>
+
         <div class="skill">
           <img src="assets/images/icons/nginx.svg" alt="Nginx" />
           <span>Nginx</span>
+          <div class="skill-bar">
+            <div class="skill-level" style="width:65%;"></div>
+          </div>
         </div>
+
         <div class="skill">
           <img src="assets/images/icons/ec2.svg" alt="EC2" />
           <span>AWS EC2</span>
+          <div class="skill-bar">
+            <div class="skill-level" style="width:75%;"></div>
+          </div>
         </div>
+
         <div class="skill">
           <img src="assets/images/icons/gcp.svg" alt="GCP" />
           <span>GCP</span>
+          <div class="skill-bar">
+            <div class="skill-level" style="width:60%;"></div>
+          </div>
         </div>
+
         <div class="skill">
           <img src="assets/images/icons/terraform.svg" alt="Terraform" />
           <span>Terraform</span>
+          <div class="skill-bar">
+            <div class="skill-level" style="width:70%;"></div>
+          </div>
         </div>
+
       </div>
     </div>
   </section>

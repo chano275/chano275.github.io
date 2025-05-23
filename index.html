@@ -1,79 +1,54 @@
----
-title: Home
----
+<!DOCTYPE html>
+<html lang="ko">
 <head>
-{% include head.html %}
-<link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
-
-<!-- <meta property="og:title" content="Shawn D'silva Full Stack Web Developer, Designer and Programmer"> -->
-<!-- Open Graph Tags -->
-<meta property="og:title" content="Shawn D'silva">
-<meta property="og:url" content="https://www.shawndsilva.com/">
-<meta property="og:description" content="{{site.description}}">
-<meta property="og:image" content="https://i.imgur.com/2xmos5O.png">
-
-<!-- Twitter Card Tags -->
-<meta name="twitter:domain" content="Shawn D'silva">
-<meta name="twitter:card" content="summary">
-<meta name="twitter:site" content="@_shawndsilva">
-<meta name="twitter:creator" content="@_shawndsilva">
-
-<script type="application/ld+json">
-  {
-  "@context": "http://schema.org",
-   "@type": "WebSite",
-   "keywords": "software engineering, react, nodejs, full stack web development, web design, javascript",
-   "url": "{{site.url}}",
-   "mainEntityOfPage": {
-      "@type": "WebPage",
-      "@id": "{{site.url}}"
-    },
-   "author": {
-      "@type": "Person",
-      "name": "{{site.name}}",
-      "email": "{{ site.email }}",
-      "url": "{{site.url}}",
-      "sameAs": [
-          "https://twitter.com/_shawndsilva",
-          "https://github.com/shawn-dsilva",
-          "https://linkedin.com/in/shawn-dsilva"
-      ]
-    }
-   }
-</script>
-
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>정찬호의 DevOps 포트폴리오</title>
+  <link rel="stylesheet" href="assets/css/style.css" />
 </head>
-
 <body>
-      {% include intro-hero.html %}
-      {% include navbar-intro.html %}
-      <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
+  <!-- Hero -->
+  <section id="hero">
+    <h1>정찬호</h1>
+    <p>DevOps • CI/CD • Kubernetes</p>
+  </section>
 
-      <script src="/public/js/script.js"></script>
-      <script src="/public/js/lazyLoading.js"></script>
+  <!-- About -->
+  <section id="about">
+    <h2>About Me</h2>
+    <p>
+      인프라 자동화와 무중단 배포를 사랑하는 DevOps 엔지니어입니다.<br/>
+      Docker, Kubernetes, Jenkins 등을 활용해 실제 현업에서 파이프라인을 설계·운영해왔습니다.
+    </p>
+  </section>
 
-      <div class="master-container">
-        {% include short-about.html %}
-      </div>
+  <!-- Skills -->
+  <section id="skills">
+    <h2>Skills & Tools</h2>
+    <ul>
+      <li>Docker & Docker Compose</li>
+      <li>Kubernetes (EKS, AKS)</li>
+      <li>CI/CD: Jenkins, GitHub Actions</li>
+      <li>Monitoring: Prometheus, Grafana</li>
+    </ul>
+  </section>
 
-        <div  class="grey-section master-container">
-            {% include skills.html %}
-        </div>
-
-      <div class="master-container">
-        {% include projects.html %}
-      </div>
-
-          <div  class="grey-section master-container">
-              {% include blog.html %}
-          </div>
-
-<div class="master-container">
-      {% include contact.html %}
+  <!-- Projects -->
+  <section id="projects">
+    <h2>Projects</h2>
+    <div class="project">
+      <h3>CI/CD 파이프라인 구축</h3>
+      <p>GitHub Actions → AWS ECR → ECS 롤링 업데이트 자동화</p>
     </div>
+    <!-- 필요 시 여기에 프로젝트 항목 추가 -->
+  </section>
 
-  {% include footer.html %}
-  <script>
-    AOS.init({ duration: 1500});
-  </script>
+  <!-- Contact -->
+  <section id="contact">
+    <h2>Contact</h2>
+    <p>Email: chano01794@gmail.com</p>
+    <p>GitHub: <a href="https://github.com/chano275">github.com/chano275</a></p>
+    <p>LinkedIn: <a href="https://www.linkedin.com/in/찬호-정-80a083307/">프로필</a></p>
+  </section>
 </body>
+</html>

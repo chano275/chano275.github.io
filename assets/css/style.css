@@ -9,3 +9,32 @@ ul { list-style: disc inside; margin-top:1rem; }
 .project { margin-bottom:1.5rem; }
 a { color:#0366d6; text-decoration:none; }
 a:hover { text-decoration:underline; }
+
+/* Social icons */
+.social-icons {
+  display: flex;
+  gap: 1rem;
+  justify-content: center;
+  margin: 1rem 0 2rem;
+}
+
+.social-icons .icon {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 48px;
+  height: 48px;
+  background: #e0e0e0;
+  border-radius: 50%;
+  color: #333;
+  text-decoration: none;
+  transition: background 0.2s;
+}
+
+.social-icons .icon:hover {
+  background: #c0c0c0;
+}
+
+.social-icons .icon i {
+  font-size: 1.2rem;
+}

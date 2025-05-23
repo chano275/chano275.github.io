@@ -1,58 +1,42 @@
 # Dependencies
-markdown:         kramdown
+markdown: kramdown
 
 # Permalinks
-permalink:        /blog/:categories/:title:output_ext
+permalink: /blog/:categories/:title:output_ext
 
+# Site Setup
+title: "타이틀"
+tagline: "한줄요약문구"
+subtagline: "부제목"
+description: "간단 소개문장"
 
-#relative_permalinks: true
+# URLs
+url: "https://chano275.github.io"    # 실제 사이트 주소
+baseurl: "/"                          # GitHub Pages 루트
 
-# Setup
-title: Shawn D'silva
-tagline: 'Full Stack Web Developer'
-subtagline: 'Embedded Systems Enthusiast'
-description:      'A Full Stack Web Developer, who is passionate about code, from Web Apps to Microcontroller Firmware and everything in between'
-name: Shawn D'silva
-logo: /favicon-32x32.png
-baseurl: /
-url: https://www.shawndsilva.com
-image: https://i.imgur.com/2xmos5O.png
-#Uncomment the below baseurl if on a local server and comment out the other #baseurl
-
-#Uncomment the below baseurl if deploying to GH-Pages and comment out the other baseurl
-#baseurl:           https://shawn-dsilva.github.io/
-
-
-social:
-  name:           "Shawn D'silva"
-  links:
-    - https://twitter.com/shawndsilva97
-    - https://www.linkedin.com/in/shawn-dsilva
-    - https://github.com/shawn-dsilva
-
+# Author Info
+name: "정찬호"
+email: "chano01794@gmail.com"
+linkedin: "https://www.linkedin.com/in/%EC%B0%AC%ED%98%B8-%EC%A0%95-80a083307/"
 github:
-  repo:           https://github.com/shawn-dsilva
+  repo: "https://github.com/chano275/chano275.github.io"
 
+# Assets
+logo: "/favicon-32x32.png"
+image: "/favicon-32x32.png"           # 대표 이미지(OG)
 
+# Social Links
+social:
+  links:
+    - "https://github.com/chano275"
+    - "https://www.linkedin.com/in/%EC%B0%AC%ED%98%B8-%EC%A0%95-80a083307/"
+    - "https://1620-ch.tistory.com/"
+
+# Resume (선택)
+# resume: "/assets/resume.pdf"
+
+# Collections
 collections:
   projects:
     output: true
     permalink: /:collection/:name:output_ext
-
-
-author:
-  twitter: shawndsilva97
-
-twitter:
-  username: shawndsilva97
-  card: summary
-
-email:  shawn@shawndsilva.com
-
-# youtube: youtube.com/yourname
-
-linkedin: https://linkedin.com/in/shawn-dsilva
-
-resume: /public/assets/resume/resume.pdf
-
-twitter: https://twitter.com/shawndsilva97

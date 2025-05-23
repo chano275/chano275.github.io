@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title>정찬호의 DevOps 포트폴리오</title>
+  <title>정찬호 DevOps 포트폴리오</title>
   <!-- Font Awesome -->
   <link
     rel="stylesheet"
@@ -12,67 +12,122 @@
   <link rel="stylesheet" href="assets/css/style.css" />
 </head>
 <body>
+
+  <!-- Navigation -->
+  <nav class="nav">
+    <a href="#hero" class="nav-logo">정찬호</a>
+    <div class="nav-links">
+      <a href="#contact-icons">Contact</a>
+      <a href="#about">About</a>
+      <a href="#projects">Projects</a>
+      <a href="#skills">Skills</a>
+    </div>
+  </nav>
+
   <!-- Hero -->
-  <section id="hero">
-    <h1>정찬호</h1>
-    <p>DevOps • CI/CD • Kubernetes</p>
+  <section id="hero" class="hero">
+    <div class="container">
+      <h1>정찬호</h1>
+      <p>DevOps • CI/CD • Kubernetes 엔지니어</p>
+    </div>
   </section>
 
-  <!-- About -->
-  <section id="about">
-    <h2>About Me</h2>
-    <img
-      src="assets/images/profile.jpg"
-      alt="정찬호 프로필 사진"
-      class="profile-img"
-    />
-    <p>
-      인프라 자동화와 무중단 배포를 사랑하는 DevOps 엔지니어입니다.<br />
-      Docker, Kubernetes, Jenkins 등을 활용해 실제 현업에서 파이프라인을 설계·운영해왔습니다.
-    </p>
+  <!-- Contact Icons (헤더 없이 아이콘만) -->
+  <section id="contact-icons">
+    <div class="container">
+      <div class="contact-icons">
+        <a href="mailto:chano01794@gmail.com" target="_blank" rel="noopener">
+          <i class="fas fa-envelope"></i>
+        </a>
+        <a href="https://github.com/chano275" target="_blank" rel="noopener">
+          <i class="fab fa-github"></i>
+        </a>
+        <a href="https://1620-ch.tistory.com/" target="_blank" rel="noopener">
+          <i class="fas fa-blog"></i>
+        </a>
+        <a
+          href="https://www.linkedin.com/in/%EC%B0%AC%ED%98%B8-%EC%A0%95-80a083307/"
+          target="_blank"
+          rel="noopener"
+        >
+          <i class="fab fa-linkedin-in"></i>
+        </a>
+      </div>
+    </div>
   </section>
 
-  <!-- Skills -->
-  <section id="skills">
-    <h2>Skills & Tools</h2>
-    <ul>
-      <li>Docker & Docker Compose</li>
-      <li>Kubernetes (EKS, AKS)</li>
-      <li>CI/CD: Jenkins, GitHub Actions</li>
-      <li>Monitoring: Prometheus, Grafana</li>
-    </ul>
+  <!-- About Me -->
+  <section id="about" class="section about">
+    <div class="container">
+      <h2>About Me</h2>
+      <p>
+        인프라 자동화와 무중단 배포를 사랑하는 DevOps 엔지니어입니다. <br />
+        Docker, Kubernetes, Jenkins 등을 활용해 파이프라인을 설계·운영해왔습니다.
+      </p>
+    </div>
   </section>
 
   <!-- Projects -->
-  <section id="projects">
-    <h2>Projects</h2>
-    <div class="project">
-      <h3>CI/CD 파이프라인 구축</h3>
-      <p>GitHub Actions → AWS ECR → ECS 롤링 업데이트 자동화</p>
+  <section id="projects" class="section projects">
+    <div class="container">
+      <h2>Projects</h2>
+      <div class="projects-grid">
+        <div class="project-card">
+          <h3>MeetGenius</h3>
+          <p>회의 자동화 AI 플랫폼 개발 및 배포</p>
+        </div>
+        <div class="project-card">
+          <h3>야금야금</h3>
+          <p>React Native 기반 식습관 관리 앱 배포</p>
+        </div>
+        <div class="project-card">
+          <h3>여봐라</h3>
+          <p>실시간 소셜 네트워킹 웹앱 개발</p>
+        </div>
+      </div>
     </div>
   </section>
 
-  <!-- Contact -->
-  <section id="contact">
-    <h2>Contact</h2>
-    <div class="contact-icons">
-      <a href="https://github.com/chano275" target="_blank" rel="noopener">
-        <i class="fab fa-github"></i>
-      </a>
-      <a href="https://1620-ch.tistory.com/" target="_blank" rel="noopener">
-        <i class="fas fa-blog"></i>
-      </a>
-      <a
-        href="https://www.linkedin.com/in/%EC%B0%AC%ED%98%B8-%EC%A0%95-80a083307/"
-        target="_blank"
-        rel="noopener"
-      >
-        <i class="fab fa-linkedin-in"></i>
-      </a>
-      <a href="mailto:chano01794@gmail.com" target="_blank" rel="noopener">
-        <i class="fas fa-envelope"></i>
-      </a>
+  <!-- Skills -->
+  <section id="skills" class="section skills">
+    <div class="container">
+      <h2>Skills &amp; Tools</h2>
+      <div class="skills-grid">
+        <div class="skill">
+          <img src="assets/images/icons/docker.svg" alt="Docker" />
+          <span>Docker</span>
+        </div>
+        <div class="skill">
+          <img src="assets/images/icons/kubernetes.svg" alt="Kubernetes" />
+          <span>Kubernetes</span>
+        </div>
+        <div class="skill">
+          <img src="assets/images/icons/jenkins.svg" alt="Jenkins" />
+          <span>Jenkins</span>
+        </div>
+        <div class="skill">
+          <img src="assets/images/icons/grafana.svg" alt="Grafana" />
+          <span>Grafana</span>
+        </div>
+        <div class="skill">
+          <img src="assets/images/icons/nginx.svg" alt="Nginx" />
+          <span>Nginx</span>
+        </div>
+        <div class="skill">
+          <img src="assets/images/icons/ec2.svg" alt="EC2" />
+          <span>AWS EC2</span>
+        </div>
+        <div class="skill">
+          <img src="assets/images/icons/gcp.svg" alt="GCP" />
+          <span>GCP</span>
+        </div>
+        <div class="skill">
+          <img src="assets/images/icons/terraform.svg" alt="Terraform" />
+          <span>Terraform</span>
+        </div>
+      </div>
     </div>
   </section>
+
 </body>
 </html>

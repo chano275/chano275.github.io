@@ -152,9 +152,10 @@
               <div class="project-desc">
                 <h4>주요 내용</h4>
                 <ul>
-                  <li>Windows PC(Django, React, MariaDB, Redis) 및 Jetson Orin Nano(FastAPI, ChromaDB) 환경에서 각각 Dockerfile, docker-compose.yml로 멀티 컨테이너 스택 구성</li>
-                  <li>docker-compose up -d로 빌드 및 실행 관리, .env 파일로 환경 변수 분리</li>
-                  <li>Local 환경에서 웹·온디바이스 간 통신 및 서비스 구현</li>
+                  <li>FastAPI, ChromaDB(온디바이스)와 Django, MariaDB, Redis, React, Redux(웹)를 각각 Docker 컨테이너로 분리하여 관리</li>
+                  <li>docker-compose.yml로 여러 컨테이너를 한 번에 띄우고, 서비스 간 네트워크를 자동 연결</li>
+                  <li>Jetson(온디바이스)와 PC(웹) 각각의 환경에서 컨테이너를 띄운 뒤, Docker 네트워크를 통해 통신</li>
+                  <li>.env 파일로 환경 변수 및 설정 분리, 개발 환경 일관성 유지</li>
                 </ul>
               </div>
             </div>
@@ -215,11 +216,14 @@
               <div class="project-desc">
                 <h4>주요 내용</h4>
                 <ul>
+                  <li>모든 주요 서비스(FastAPI, React, Jenkins 등)를 Docker 컨테이너로 분리 관리</li>
                   <li>AWS EC2(웹 서버) + GCP GPU 서버(AI 서버)로 인프라 이원화</li>
+                  <li>Terraform으로 GCP GPU 서버(IaC) 기본 배포 구성</li>
                   <li>Jenkins + GitLab webhook으로 CI/CD 구축</li>
                   <li>GitLab push/merge 시 Jenkins Freestyle Job이 동작해 Docker 이미지 빌드 및 docker-compose로 EC2 배포</li>
-                  <li>Terraform으로 GCP GPU 서버(IaC) 기본 배포 구성</li>
-                  <li>docker-compose.override.yml로 다른 개발자들이 로컬에서 테스팅할 수 있게 함</li>
+                  <li>docker-compose.override.yml 제공하여여 다른 개발자들이 로컬에서 테스팅할 수 있게 함</li>
+                  <li>k6를 통해 DB 조회를 많이 하는 특정 페이지 (경기 일정 페이지) 에 70명 가량의 트래픽이 몰릴 때에, 평균 대기 시간이 11초 인걸 확인 후 BE 개발자에게 Redis 도입 권유</li>
+                  <li>S3 등 외부 스토리지 연동</li>
                 </ul>
               </div>
             </div>
@@ -292,73 +296,79 @@
     <div class="container">
       <h2>🛠️ Skills &amp; Tools</h2>
       <div class="skills-grid">
-
         <div class="skill">
           <img src="assets/images/icons/docker.svg" alt="Docker" />
           <span>Docker</span>
-          <div class="skill-bar">
-            <div class="skill-level" style="width:80%;"></div>
-          </div>
+          <div class="skill-bar"><div class="skill-level" style="width:80%;"></div></div>
         </div>
-
+        <div class="skill">
+          <img src="assets/images/icons/docker.svg" alt="Docker Compose" />
+          <span>Docker Compose</span>
+          <div class="skill-bar"><div class="skill-level" style="width:70%;"></div></div>
+        </div>
         <div class="skill">
           <img src="assets/images/icons/kubernetes.svg" alt="Kubernetes" />
           <span>Kubernetes</span>
-          <div class="skill-bar">
-            <div class="skill-level" style="width:30%;"></div>
-          </div>
+          <div class="skill-bar"><div class="skill-level" style="width:30%;"></div></div>
         </div>
-
         <div class="skill">
           <img src="assets/images/icons/jenkins.svg" alt="Jenkins" />
           <span>Jenkins</span>
-          <div class="skill-bar">
-            <div class="skill-level" style="width:50%;"></div>
-          </div>
+          <div class="skill-bar"><div class="skill-level" style="width:50%;"></div></div>
         </div>
-
         <div class="skill">
-          <img src="assets/images/icons/grafana.svg" alt="Grafana" />
-          <span>Grafana</span>
-          <div class="skill-bar">
-            <div class="skill-level" style="width:10%;"></div>
-          </div>
+          <img src="assets/images/icons/gitlab.svg" alt="GitLab" />
+          <span>GitLab</span>
+          <div class="skill-bar"><div class="skill-level" style="width:50%;"></div></div>
         </div>
-
         <div class="skill">
           <img src="assets/images/icons/nginx.svg" alt="Nginx" />
           <span>Nginx</span>
-          <div class="skill-bar">
-            <div class="skill-level" style="width:50%;"></div>
-          </div>
+          <div class="skill-bar"><div class="skill-level" style="width:50%;"></div></div>
         </div>
-
         <div class="skill">
-          <img src="assets/images/icons/ec2.svg" alt="EC2" />
-          <span>AWS EC2</span>
-          <div class="skill-bar">
-            <div class="skill-level" style="width:70%;"></div>
-          </div>
+          <img src="assets/images/icons/fastapi.svg" alt="FastAPI" />
+          <span>FastAPI</span>
+          <div class="skill-bar"><div class="skill-level" style="width:60%;"></div></div>
         </div>
-
+        <div class="skill">
+          <img src="assets/images/icons/mariadb.svg" alt="MariaDB" />
+          <span>MariaDB</span>
+          <div class="skill-bar"><div class="skill-level" style="width:50%;"></div></div>
+        </div>
+        <div class="skill">
+          <img src="assets/images/icons/aws.svg" alt="AWS" />
+          <span>AWS</span>
+          <div class="skill-bar"><div class="skill-level" style="width:70%;"></div></div>
+        </div>
         <div class="skill">
           <img src="assets/images/icons/gcp.svg" alt="GCP" />
           <span>GCP</span>
-          <div class="skill-bar">
-            <div class="skill-level" style="width:40%;"></div>
-          </div>
+          <div class="skill-bar"><div class="skill-level" style="width:40%;"></div></div>
         </div>
-
         <div class="skill">
           <img src="assets/images/icons/terraform.svg" alt="Terraform" />
           <span>Terraform</span>
-          <div class="skill-bar">
-            <div class="skill-level" style="width:30%;"></div>
-          </div>
+          <div class="skill-bar"><div class="skill-level" style="width:30%;"></div></div>
         </div>
-
+        <div class="skill">
+          <img src="assets/images/icons/k6.svg" alt="k6" />
+          <span>k6</span>
+          <div class="skill-bar"><div class="skill-level" style="width:20%;"></div></div>
+        </div>
       </div>
     </div>
+    <section class="collab-section">
+      <div class="container">
+        <h2>🤝 협업 및 문서화 도구</h2>
+        <div class="collab-icons">
+          <img src="assets/images/icons/jira.svg" alt="Jira" />
+          <img src="assets/images/icons/notion.svg" alt="Notion" />
+          <img src="assets/images/icons/github.svg" alt="GitHub" />
+          <img src="assets/images/icons/gitlab.svg" alt="GitLab" />
+        </div>
+      </div>
+    </section>
   </section>
 
   <!-- Work Experience -->
@@ -398,7 +408,7 @@
               <td class="edu-period">2024/07/01 ~ 2025/06/30</td>
               <td>
                 <div class="edu-school">삼성청년SW·AI아카데미</div>
-                <div class="edu-desc">1학기: Data Track<br>2학기: Data Track</div>
+                <div class="edu-desc">1학기: Data Track<br>2학기: Data Track, 6주간 6인 팀 프로젝트 3회</div>
               </td>
             </tr>
           </tbody>

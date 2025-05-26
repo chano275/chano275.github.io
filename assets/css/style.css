@@ -549,3 +549,36 @@ body { font-family: 'Noto Sans KR', sans-serif; color: #333; line-height:1.6; }
     justify-content: center;
   }
 }
+
+.collab-section {
+  margin-top: 6rem;
+  margin-bottom: 6rem;
+}
+.collab-section .container {
+  max-width: 900px;
+  margin: 0 auto;
+  padding-left: 0;
+}
+.collab-section h2 {
+  font-size: 2rem;
+  color: #2d3436;
+  margin-bottom: 1.5rem;
+  border-bottom: 3px solid #3b82f6;
+  display: inline-block;
+  padding-bottom: .3rem;
+  text-align: left;
+}
+.collab-icons {
+  display: flex;
+  justify-content: flex-start;
+  gap: 1.5rem;
+}
+.collab-icons img {
+  width: 38px;
+  height: 38px;
+  filter: grayscale(100%);
+  transition: filter 0.3s;
+}
+.collab-icons img:hover {
+  filter: grayscale(0%);
+}

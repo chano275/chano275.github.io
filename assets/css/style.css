@@ -470,6 +470,7 @@ body { font-family: 'Noto Sans KR', sans-serif; color: #333; line-height:1.6; }
 
 .work-table-wrap, .education-table-wrap {
   margin-top: 2rem;
+  margin-bottom: 2rem;
   display: flex;
   justify-content: center;
 }
@@ -552,7 +553,7 @@ body { font-family: 'Noto Sans KR', sans-serif; color: #333; line-height:1.6; }
 
 .collab-section {
   margin-top: 6rem;
-  margin-bottom: 6rem;
+  margin-bottom: 3rem;
 }
 .collab-section .container {
   max-width: 900px;
@@ -574,14 +575,31 @@ body { font-family: 'Noto Sans KR', sans-serif; color: #333; line-height:1.6; }
   gap: 1.5rem;
 }
 .collab-icons img {
+  width: 28px !important;
+  height: 28px !important;
   max-width: 28px;
   max-height: 28px;
-  width: auto;
-  height: auto;
   object-fit: contain;
+  display: block;
   filter: grayscale(100%);
   transition: filter 0.3s;
 }
 .collab-icons img:hover {
   filter: grayscale(0%);
+}
+
+.project-summary {
+  background: #f7faff;
+  border-left: 4px solid #3b82f6;
+  padding: 0.8rem 1.2rem;
+  font-size: 1.08rem;
+  color: #1976d2;
+  margin-bottom: 1.1rem;
+  font-weight: 500;
+  font-family: 'Noto Sans Mono', 'Consolas', monospace;
+}
+.project-role {
+  font-size: 1.08rem;
+  color: #444;
+  margin-bottom: 1.1rem;
 }

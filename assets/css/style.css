@@ -207,16 +207,60 @@ body { font-family: 'Noto Sans KR', sans-serif; color: #333; line-height:1.6; }
   margin-top: 40px;
 }
 
+.project-slider {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+  margin-top: 2.5rem;
+}
+
+.projects-view {
+  width: 100%;
+  max-width: 900px;
+  min-height: 520px;
+  display: flex;
+  justify-content: center;
+  align-items: stretch;
+}
+
 .project-card {
   background: white;
   border-radius: 20px;
   overflow: hidden;
   box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
   transition: transform 0.3s ease;
+  width: 100%;
+  max-width: 900px;
+  margin: 0 auto;
+  display: none; /* JS에서 display: block으로 보이게 처리 */
 }
 
 .project-card:hover {
   transform: translateY(-5px);
+}
+
+.arrow {
+  background: #fff;
+  border: none;
+  color: #3b82f6;
+  font-size: 2.2rem;
+  font-weight: bold;
+  border-radius: 50%;
+  width: 48px;
+  height: 48px;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.08);
+  cursor: pointer;
+  margin: 0 1.2rem;
+  transition: background 0.2s, color 0.2s;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.arrow:hover {
+  background: #3b82f6;
+  color: #fff;
 }
 
 .project-header {
@@ -290,7 +334,9 @@ body { font-family: 'Noto Sans KR', sans-serif; color: #333; line-height:1.6; }
   font-size: 1.2rem;
   font-weight: 600;
   color: #2d3436;
-  margin-bottom: 15px;
+  margin-bottom: 1rem;
+  padding-bottom: 0.5rem;
+  border-bottom: 2px solid #eee;
 }
 
 .project-tech p {
@@ -312,6 +358,13 @@ body { font-family: 'Noto Sans KR', sans-serif; color: #333; line-height:1.6; }
   font-size: 1.1rem;
   line-height: 1.6;
   color: #4a5568;
+}
+
+.project-desc li strong {
+  color: #3b82f6;
+  font-weight: 600;
+  display: inline-block;
+  margin-right: 0.5rem;
 }
 
 .project-desc li:before {
@@ -380,23 +433,59 @@ body { font-family: 'Noto Sans KR', sans-serif; color: #333; line-height:1.6; }
   }
 }
 
-.skill img {
-  width:40px; height:40px; object-fit:contain; margin:0 auto;
+.skills-category {
+  margin-bottom: 2rem;
 }
-.skill span { display:block; margin-top:.5rem; font-size:.95rem; }
 
-/* 스킬별 프로그레스 바 */
+.skills-category h3 {
+  color: #333;
+  margin-bottom: 1rem;
+  font-size: 1.5rem;
+  border-bottom: 2px solid #eee;
+  padding-bottom: 0.5rem;
+}
+
+.skill {
+  background: #fff;
+  padding: 1rem;
+  border-radius: 8px;
+  box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+  transition: transform 0.2s;
+}
+
+.skill:hover {
+  transform: translateY(-2px);
+}
+
+.skill img {
+  width: 40px;
+  height: 40px;
+  margin-bottom: 0.5rem;
+}
+
+.skill span {
+  display: block;
+  font-weight: 600;
+  margin-bottom: 0.5rem;
+}
+
+.skill-desc {
+  font-size: 0.9rem;
+  color: #666;
+  margin-bottom: 0.5rem;
+  min-height: 2.4em;
+}
+
 .skill-bar {
-  width: 100%;
-  height: 6px;
   background: #eee;
+  height: 6px;
   border-radius: 3px;
   overflow: hidden;
-  margin-top: 0.5rem;
 }
+
 .skill-level {
+  background: #4a90e2;
   height: 100%;
-  background: #3b82f6;
   border-radius: 3px;
   transition: width 0.3s ease;
 }
@@ -445,27 +534,63 @@ body { font-family: 'Noto Sans KR', sans-serif; color: #333; line-height:1.6; }
   display: flex;
   justify-content: center;
 }
+
 .certificate-table {
   border-collapse: collapse;
-  min-width: 340px;
+  width: 100%;
+  max-width: 600px;
   font-size: 1.05rem;
   background: #fff;
   box-shadow: 0 2px 8px rgba(0,0,0,0.07);
   border-radius: 8px;
   overflow: hidden;
 }
-.certificate-table th, .certificate-table td {
-  padding: 0.85rem 1.2rem;
+
+.certificate-table th, 
+.certificate-table td {
+  padding: 1rem 1.5rem;
   border-bottom: 1px solid #eee;
   text-align: center;
 }
+
 .certificate-table th {
-  background: #f5f7fa;
-  font-weight: bold;
+  background: #f8f9fa;
+  font-weight: 600;
   color: #333;
+  font-size: 1.1rem;
 }
+
+.certificate-table td {
+  color: #444;
+}
+
+.certificate-table td:first-child {
+  font-weight: 500;
+  text-align: left;
+}
+
+.certificate-table td:nth-child(2) {
+  color: #3b82f6;
+  font-weight: 500;
+}
+
 .certificate-table tr:last-child td {
   border-bottom: none;
+}
+
+.certificate-table tr:hover {
+  background-color: #f8f9fa;
+}
+
+@media (max-width: 600px) {
+  .certificate-table {
+    font-size: 0.95rem;
+  }
+  
+  .certificate-table th, 
+  .certificate-table td {
+    padding: 0.8rem 1rem;
+  }
 }
 
 .work-table-wrap, .education-table-wrap {
@@ -602,4 +727,47 @@ body { font-family: 'Noto Sans KR', sans-serif; color: #333; line-height:1.6; }
   font-size: 1.08rem;
   color: #444;
   margin-bottom: 1.1rem;
+}
+
+.github-link {
+  margin-left: 0.5rem;
+  color: #333;
+  font-size: 1.6rem;
+  vertical-align: middle;
+  transition: color 0.2s;
+}
+.github-link:hover {
+  color: #3b82f6;
+}
+.project-pill {
+  background: rgba(255,255,255,0.18);
+  color: #fff;
+  font-size: 1.08rem;
+  font-weight: 500;
+  padding: 0.5em 1.3em;
+  border-radius: 2em;
+  margin-left: auto;
+  display: inline-block;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.04);
+  letter-spacing: 0.01em;
+}
+.project-meta {
+  font-size: 0.95rem;
+  color: #888;
+  margin-left: 0.7rem;
+  font-weight: 400;
+  vertical-align: middle;
+}
+
+@media (max-width: 900px) {
+  .projects-view, .project-card {
+    max-width: 100%;
+    min-width: 0;
+  }
+  .arrow {
+    font-size: 1.6rem;
+    width: 36px;
+    height: 36px;
+    margin: 0 0.5rem;
+  }
 }

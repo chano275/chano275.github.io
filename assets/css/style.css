@@ -213,6 +213,7 @@ body { font-family: 'Noto Sans KR', sans-serif; color: #333; line-height:1.6; }
   justify-content: center;
   position: relative;
   margin-top: 2.5rem;
+  min-height: 600px;
 }
 
 .projects-view {
@@ -241,26 +242,46 @@ body { font-family: 'Noto Sans KR', sans-serif; color: #333; line-height:1.6; }
 }
 
 .arrow {
-  background: #fff;
+  position: fixed;
+  top: 50%;
+  transform: translateY(-50%);
+  background: transparent;
   border: none;
-  color: #3b82f6;
-  font-size: 2.2rem;
-  font-weight: bold;
-  border-radius: 50%;
-  width: 48px;
-  height: 48px;
-  box-shadow: 0 2px 8px rgba(0,0,0,0.08);
+  box-shadow: none;
   cursor: pointer;
-  margin: 0 1.2rem;
-  transition: background 0.2s, color 0.2s;
+  z-index: 2000;
+  padding: 0;
+  margin: 0;
+  width: 56px;
+  height: 56px;
   display: flex;
   align-items: center;
   justify-content: center;
+  transition: filter 0.2s;
 }
 
-.arrow:hover {
-  background: #3b82f6;
-  color: #fff;
+.arrow.left {
+  left: 40px;
+}
+
+.arrow.right {
+  right: 40px;
+}
+
+.arrow svg {
+  display: block;
+  width: 44px;
+  height: 44px;
+  filter: drop-shadow(0 2px 8px rgba(60,80,200,0.13));
+  transition: filter 0.2s;
+}
+
+.arrow:hover svg circle {
+  fill: #3b82f6;
+}
+
+.arrow:active svg {
+  filter: brightness(0.95);
 }
 
 .project-header {
@@ -764,10 +785,11 @@ body { font-family: 'Noto Sans KR', sans-serif; color: #333; line-height:1.6; }
     max-width: 100%;
     min-width: 0;
   }
-  .arrow {
-    font-size: 1.6rem;
-    width: 36px;
-    height: 36px;
-    margin: 0 0.5rem;
+  .project-slider {
+    min-height: 0;
   }
+  .arrow.left { left: 8px; }
+  .arrow.right { right: 8px; }
+  .arrow { width: 40px; height: 40px; }
+  .arrow svg { width: 32px; height: 32px; }
 }

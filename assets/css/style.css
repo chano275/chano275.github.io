@@ -241,34 +241,31 @@ body { font-family: 'Noto Sans KR', sans-serif; color: #333; line-height:1.6; }
   transform: translateY(-5px);
 }
 
-.arrow {
-  position: fixed;
-  top: 50%;
-  transform: translateY(-50%);
-  background: transparent;
+.arrow.project-arrow {
+  position: absolute;
+  top: 500px;
+  transform: none;
+  z-index: 10;
+  background: none;
   border: none;
-  box-shadow: none;
   cursor: pointer;
-  z-index: 2000;
-  padding: 0;
-  margin: 0;
-  width: 56px;
-  height: 56px;
+  display: none;
+}
+
+.arrow.project-arrow.left {
+  left: -32px;
+}
+
+.arrow.project-arrow.right {
+  right: -32px;
+}
+
+/* Projects 섹션 내에서만 화살표 보이기 */
+#projects .arrow {
   display: flex;
-  align-items: center;
-  justify-content: center;
-  transition: filter 0.2s;
 }
 
-.arrow.left {
-  left: 40px;
-}
-
-.arrow.right {
-  right: 40px;
-}
-
-.arrow svg {
+.arrow.project-arrow svg {
   display: block;
   width: 44px;
   height: 44px;
@@ -276,11 +273,11 @@ body { font-family: 'Noto Sans KR', sans-serif; color: #333; line-height:1.6; }
   transition: filter 0.2s;
 }
 
-.arrow:hover svg circle {
+.arrow.project-arrow:hover svg circle {
   fill: #3b82f6;
 }
 
-.arrow:active svg {
+.arrow.project-arrow:active svg {
   filter: brightness(0.95);
 }
 
@@ -502,6 +499,19 @@ body { font-family: 'Noto Sans KR', sans-serif; color: #333; line-height:1.6; }
   height: 6px;
   border-radius: 3px;
   overflow: hidden;
+  position: relative;
+}
+
+.skill-bar::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: repeating-linear-gradient(to right, transparent, transparent 19%, #ccc 19%, #ccc 21%, transparent 21%, transparent 39%, #ccc 39%, #ccc 41%, transparent 41%, transparent 59%, #ccc 59%, #ccc 61%, transparent 61%, transparent 79%, #ccc 79%, #ccc 81%, transparent 81%, transparent);
+  pointer-events: none;
+  z-index: 2;
 }
 
 .skill-level {
@@ -788,8 +798,86 @@ body { font-family: 'Noto Sans KR', sans-serif; color: #333; line-height:1.6; }
   .project-slider {
     min-height: 0;
   }
-  .arrow.left { left: 8px; }
-  .arrow.right { right: 8px; }
-  .arrow { width: 40px; height: 40px; }
-  .arrow svg { width: 32px; height: 32px; }
+  .arrow.project-arrow.left { left: -8px; }
+  .arrow.project-arrow.right { right: -8px; }
+  .arrow.project-arrow { width: 40px; height: 40px; }
+  .arrow.project-arrow svg { width: 32px; height: 32px; }
+}
+
+.project-front-image {
+  width: 100%;
+  max-width: 900px;
+  margin: 0 auto 1.2rem auto;
+  text-align: center;
+}
+.project-front-image img {
+  width: 100%;
+  max-width: 420px;
+  border-radius: 18px;
+  box-shadow: 0 2px 12px rgba(60,80,200,0.10);
+  object-fit: cover;
+}
+
+.project-img-slider {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 0.5rem;
+  margin-bottom: 1.5rem;
+  position: relative;
+}
+.slider-img {
+  aspect-ratio: 16/9;
+  width: 90%;
+  max-width: 900px;
+  max-height: 480px;
+  border-radius: 18px;
+  box-shadow: 0 2px 12px rgba(60,80,200,0.10);
+  object-fit: contain;
+  background: #fff;
+  transition: box-shadow 0.2s;
+  display: none;
+}
+.slider-img.active { display: block; }
+.slider-dots {
+  display: flex;
+  justify-content: center;
+  gap: 0.5rem;
+  margin-top: 0.7rem;
+  width: 100%;
+}
+.slider-dot {
+  width: 12px; height: 12px;
+  border-radius: 50%;
+  background: #ccc;
+  cursor: pointer;
+  transition: background 0.2s;
+}
+.slider-dot.active {
+  background: #4f46e5;
+}
+.img-arrow {
+  background: #fff;
+  border: none;
+  color: #4f46e5;
+  font-size: 2.1rem;
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  box-shadow: 0 2px 8px rgba(60,80,200,0.10);
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: background 0.2s, color 0.2s;
+  z-index: 1;
+}
+.img-arrow:hover {
+  background: #4f46e5;
+  color: #fff;
+}
+@media (max-width: 700px) {
+  .slider-img { max-width: 98vw; }
+  .img-arrow { width: 32px; height: 32px; font-size: 1.5rem; }
 }

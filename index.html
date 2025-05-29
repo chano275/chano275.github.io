@@ -110,7 +110,7 @@
     <div class="container">
       <h2 class="section-title">💡 Projects</h2>
       <div class="project-slider">
-        <button class="arrow left" id="project-prev">
+        <button class="arrow project-arrow left" id="project-prev">
           <svg width="44" height="44" viewBox="0 0 44 44">
             <circle cx="22" cy="22" r="20" fill="#4f46e5"/>
             <polyline points="26,12 18,22 26,32" fill="none" stroke="#fff" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/>
@@ -129,8 +129,13 @@
               <span class="project-pill">25.01 ~ 25.02, 6인 AIoT 프로젝트</span>
             </div>
             <div class="project-content">
-              <div class="project-image">
-                <img src="assets/images/MG.png" alt="MeetGenius 프로젝트 이미지" />
+              <div class="project-img-slider">
+                <img src="assets/images/MG_FRONT.png" alt="MeetGenius 대표 이미지" class="slider-img active" />
+                <img src="assets/images/MG.png" alt="MeetGenius 아키텍처 이미지" class="slider-img" />
+                <div class="slider-dots">
+                  <span class="slider-dot active"></span>
+                  <span class="slider-dot"></span>
+                </div>
               </div>
               <div class="project-info">
                 <div class="project-summary">
@@ -198,8 +203,13 @@
               <span class="project-pill">25.02 ~ 25.04, 6인 핀테크 프로젝트</span>
             </div>
             <div class="project-content">
-              <div class="project-image">
-                <img src="assets/images/YY.png" alt="야금야금 프로젝트 이미지" />
+              <div class="project-img-slider">
+                <img src="assets/images/YG_FRONT.png" alt="야금야금 대표 이미지" class="slider-img active" />
+                <img src="assets/images/YY.png" alt="야금야금 아키텍처 이미지" class="slider-img" />
+                <div class="slider-dots">
+                  <span class="slider-dot active"></span>
+                  <span class="slider-dot"></span>
+                </div>
               </div>
               <div class="project-info">
                 <div class="project-summary">
@@ -276,9 +286,15 @@
               <span class="project-pill">25.04 ~ 25.05, 3인 웹·AI 프로젝트</span>
             </div>
             <div class="project-content">
-              <div class="project-images">
-                <img src="assets/images/YB.jpg" alt="여봐라 프로젝트 이미지 1" />
-                <img src="assets/images/YB_2.png" alt="여봐라 프로젝트 이미지 2" />
+              <div class="project-img-slider">
+                <img src="assets/images/YB_FRONT.png" alt="여봐라 대표 이미지" class="slider-img active" />
+                <img src="assets/images/YB.jpg" alt="여봐라 아키텍처1" class="slider-img" />
+                <img src="assets/images/YB_2.png" alt="여봐라 아키텍처2" class="slider-img" />
+                <div class="slider-dots">
+                  <span class="slider-dot active"></span>
+                  <span class="slider-dot"></span>
+                  <span class="slider-dot"></span>
+                </div>
               </div>
               <div class="project-info">
                 <div class="project-summary">
@@ -334,7 +350,7 @@
             </div>
           </div>
         </div>
-        <button class="arrow right" id="project-next">
+        <button class="arrow project-arrow right" id="project-next">
           <svg width="44" height="44" viewBox="0 0 44 44">
             <circle cx="22" cy="22" r="20" fill="#4f46e5"/>
             <polyline points="18,12 26,22 18,32" fill="none" stroke="#fff" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/>
@@ -362,6 +378,40 @@
       current = (current + 1) % cards.length;
       showCard(current);
     };
+
+    // 이미지 슬라이더 점 인디케이터 및 클릭 이동
+    function setupImgSlider(slider) {
+      const imgs = slider.querySelectorAll('.slider-img');
+      const dots = slider.querySelectorAll('.slider-dot');
+      let idx = 0;
+      function showImg(i) {
+        imgs.forEach((img, j) => img.classList.toggle('active', i === j));
+        dots.forEach((dot, j) => dot.classList.toggle('active', i === j));
+      }
+      imgs.forEach((img, i) => {
+        img.onclick = () => { showImg((i + 1) % imgs.length); idx = (i + 1) % imgs.length; };
+      });
+      dots.forEach((dot, i) => {
+        dot.onclick = () => { showImg(i); idx = i; };
+      });
+      showImg(idx);
+    }
+    document.querySelectorAll('.project-img-slider').forEach(setupImgSlider);
+
+    // 프로젝트 섹션이 화면에 있을 때만 화살표 버튼 보이기
+    function toggleProjectArrows() {
+      const section = document.getElementById('projects');
+      const arrows = document.querySelectorAll('.arrow.project-arrow');
+      if (!section) return;
+      const rect = section.getBoundingClientRect();
+      const inView = rect.top < window.innerHeight && rect.bottom > 0;
+      arrows.forEach(arrow => {
+        arrow.style.display = inView ? 'flex' : 'none';
+      });
+    }
+    window.addEventListener('scroll', toggleProjectArrows);
+    window.addEventListener('resize', toggleProjectArrows);
+    document.addEventListener('DOMContentLoaded', toggleProjectArrows);
   </script>
 
   <!-- Skills -->

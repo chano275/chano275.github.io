@@ -117,55 +117,61 @@
           </svg>
         </button>
         <div class="projects-view">
-          <!-- MeetGenius 카드 -->
+          <!-- 여봐라 카드 -->
           <div class="project-card">
             <div class="project-header">
               <h3 class="project-title">
-                MeetGenius
-                <a href="https://github.com/chano275/MeetGenius" target="_blank" class="github-link" title="GitHub 바로가기">
+                여봐라
+                <a href="https://github.com/chano275/yeowbara" target="_blank" class="github-link" title="GitHub 바로가기">
                   <i class="fab fa-github"></i>
                 </a>
               </h3>
-              <span class="project-pill">25.01 ~ 25.02, 6인 AIoT 프로젝트</span>
+              <span class="project-pill">25.04 ~ 25.05, 3인 웹·AI 프로젝트</span>
             </div>
             <div class="project-content">
               <div class="project-img-slider">
-                <img src="assets/images/MG_FRONT.png" alt="MeetGenius 대표 이미지" class="slider-img active" />
-                <img src="assets/images/MG.png" alt="MeetGenius 아키텍처 이미지" class="slider-img" />
+                <img src="assets/images/YB_FRONT.png" alt="여봐라 대표 이미지" class="slider-img active" />
+                <img src="assets/images/YB.jpg" alt="여봐라 아키텍처1" class="slider-img" />
+                <img src="assets/images/YB_2.png" alt="여봐라 아키텍처2" class="slider-img" />
                 <div class="slider-dots">
                   <span class="slider-dot active"></span>
+                  <span class="slider-dot"></span>
                   <span class="slider-dot"></span>
                 </div>
               </div>
               <div class="project-info">
                 <div class="project-summary">
-                  On-Premise 환경에서 AIoT 보드인 Jetson Orin Nano를 이용한 회의 지원 AI Agent 서비스
+                  쿠버네티스 기반 개인화된 MCP 환경으로 채팅 기반 업무 자동화 제공하는 AI 어시스턴트 플랫폼
                 </div>
                 <div class="project-role">
-                  <strong>내 역할:</strong> 팀장 / PM / DevOps / STT(AI)
+                  <strong>내 역할:</strong> 팀장 / PM / DevOps
                 </div>
                 <div class="project-tech">
                   <h4>기술 스택</h4>
                   <div class="tech-stack">
                     <div class="tech-item">
-                      <img src="assets/images/icons/django.svg" alt="Django" />
-                      <span>Django</span>
+                      <img src="assets/images/icons/fastapi.svg" alt="FastAPI" />
+                      <span>FastAPI</span>
                     </div>
                     <div class="tech-item">
                       <img src="assets/images/icons/react.svg" alt="React" />
                       <span>React</span>
                     </div>
                     <div class="tech-item">
-                      <img src="assets/images/icons/redis.svg" alt="Redis" />
-                      <span>Redis</span>
+                      <img src="assets/images/icons/kubernetes.svg" alt="Kubernetes" />
+                      <span>Kubernetes</span>
                     </div>
                     <div class="tech-item">
-                      <img src="assets/images/icons/mariadb.svg" alt="MariaDB" />
-                      <span>MariaDB</span>
+                      <img src="assets/images/icons/jenkins.svg" alt="Jenkins" />
+                      <span>Jenkins</span>
                     </div>
                     <div class="tech-item">
-                      <img src="assets/images/icons/fastapi.svg" alt="FastAPI" />
-                      <span>FastAPI</span>
+                      <img src="assets/images/icons/nginx.svg" alt="Nginx" />
+                      <span>Nginx</span>
+                    </div>
+                    <div class="tech-item">
+                      <img src="assets/images/icons/aws.svg" alt="AWS" />
+                      <span>AWS</span>
                     </div>
                     <div class="tech-item">
                       <img src="assets/images/icons/docker.svg" alt="Docker" />
@@ -176,16 +182,12 @@
                 <div class="project-desc">
                   <h4>DevOps 핵심 기여</h4>
                   <ul>
-                    <li>
-                      <strong>컨테이너화 및 하이브리드 환경 구성</strong>:
-                      온디바이스(Jetson)와 웹(PC) 각각의 서비스 환경을 컨테이너로 분리하여 관리하고,
-                      Docker 네트워크를 통해 두 환경 간 통신을 구현
-                    </li>
-                    <li>
-                      <strong>분산 환경 표준화 및 신속 배포</strong>:
-                      Jetson(온디바이스)와 PC(웹) 각각에서 docker-compose로 여러 서비스를 한 번에 일관되게 실행, 환경 재현 및 확장 용이
-                    </li>
-                    <li><strong>환경 설정 표준화</strong>: .env 파일로 환경 변수 및 설정 분리, 개발 환경 일관성 유지</li>
+                    <li><strong>Kubernetes 실전 도입</strong>: AWS EC2에서 Kubernetes(K8s) 첫 실전 적용, 컨트롤 플레인과 워커 노드를 단일 EC2에서 효율적으로 구성하고, 이벤트 기반 사용자별 FastAPI AI Agent Pod의 자동 스케일링 구현</li>
+                    <li><strong>CI/CD 파이프라인 확장</strong>: Jenkins + GitLab + Docker 기반 파이프라인을 Kubernetes로 확장</li>
+                    <li><strong>컨테이너 레지스트리 활용</strong>: Docker Hub를 통한 이미지 관리 및 자동 배포</li>
+                    <li><strong>보안 및 인프라 구성</strong>: Nginx 리버스 프록시, HTTPS 인증서, 도메인 연동으로 보안 강화</li>
+                    <li><strong>개발 환경 표준화</strong>: docker-compose.override.yml 및 .env 파일(Jenkins Credential 연동)로 환경 변수 관리, 개발·운영 환경 일관성 유지</li>
+                    <li><strong>MCP 서비스 아키텍처 설계</strong>: 사용자별 Pod에 Node.js/Python 서버를 동작시키고, ConfigMap으로 서버 실행 환경을 제어하여 MCP 서비스 구현</li>
                   </ul>
                 </div>
               </div>
@@ -266,7 +268,7 @@
                     <li><strong>멀티 클라우드 아키텍처</strong>: AWS EC2(웹 서버) + GCP GPU 서버(AI 서버)로 인프라 이원화</li>
                     <li><strong>IaC 도입</strong>: Terraform으로 GCP GPU 서버 기본 배포 구성</li>
                     <li><strong>CI/CD 파이프라인 및 자동화 배포</strong>: GitLab webhook과 Jenkins를 연동하여, 코드 변경 시 Docker 이미지 빌드 및 EC2에 자동 배포되는 파이프라인 구축</li>
-                    <li><strong>성능 모니터링 및 최적화</strong>: k6를 통한 부하 테스트로 Redis 도입 결정, 평균 대기 시간 11초 → 개선</li>
+                    <li><strong>성능 모니터링 및 최적화</strong>: k6를 통한 부하 테스트로 70명 트래픽 몰릴 시 특정 페이지의 평균 대기 시간 11초 → Redis 도입 제안</li>
                     <li><strong>스토리지 연동</strong>: AWS S3를 활용한 정적 자원 관리 및 백업 구성</li>
                     <li><strong>개발 환경 표준화</strong>: docker-compose.override.yml 및 .env 파일(Jenkins Credential 연동)로 환경 변수 관리, 개발·운영 환경 일관성 유지</li>
                   </ul>
@@ -274,61 +276,55 @@
               </div>
             </div>
           </div>
-          <!-- 여봐라 카드 -->
+          <!-- MeetGenius 카드 -->
           <div class="project-card">
             <div class="project-header">
               <h3 class="project-title">
-                여봐라
-                <a href="https://github.com/chano275/yeowbara" target="_blank" class="github-link" title="GitHub 바로가기">
+                MeetGenius
+                <a href="https://github.com/chano275/MeetGenius" target="_blank" class="github-link" title="GitHub 바로가기">
                   <i class="fab fa-github"></i>
                 </a>
               </h3>
-              <span class="project-pill">25.04 ~ 25.05, 3인 웹·AI 프로젝트</span>
+              <span class="project-pill">25.01 ~ 25.02, 6인 AIoT 프로젝트</span>
             </div>
             <div class="project-content">
               <div class="project-img-slider">
-                <img src="assets/images/YB_FRONT.png" alt="여봐라 대표 이미지" class="slider-img active" />
-                <img src="assets/images/YB.jpg" alt="여봐라 아키텍처1" class="slider-img" />
-                <img src="assets/images/YB_2.png" alt="여봐라 아키텍처2" class="slider-img" />
+                <img src="assets/images/MG_FRONT.png" alt="MeetGenius 대표 이미지" class="slider-img active" />
+                <img src="assets/images/MG.png" alt="MeetGenius 아키텍처 이미지" class="slider-img" />
                 <div class="slider-dots">
                   <span class="slider-dot active"></span>
-                  <span class="slider-dot"></span>
                   <span class="slider-dot"></span>
                 </div>
               </div>
               <div class="project-info">
                 <div class="project-summary">
-                  쿠버네티스 기반 개인화된 MCP 환경으로 채팅 기반 업무 자동화 제공하는 AI 어시스턴트 플랫폼
+                  On-Premise 환경에서 AIoT 보드인 Jetson Orin Nano를 이용한 회의 지원 AI Agent 서비스
                 </div>
                 <div class="project-role">
-                  <strong>내 역할:</strong> 팀장 / PM / DevOps
+                  <strong>내 역할:</strong> 팀장 / PM / DevOps / STT(AI)
                 </div>
                 <div class="project-tech">
                   <h4>기술 스택</h4>
                   <div class="tech-stack">
                     <div class="tech-item">
-                      <img src="assets/images/icons/fastapi.svg" alt="FastAPI" />
-                      <span>FastAPI</span>
+                      <img src="assets/images/icons/django.svg" alt="Django" />
+                      <span>Django</span>
                     </div>
                     <div class="tech-item">
                       <img src="assets/images/icons/react.svg" alt="React" />
                       <span>React</span>
                     </div>
                     <div class="tech-item">
-                      <img src="assets/images/icons/kubernetes.svg" alt="Kubernetes" />
-                      <span>Kubernetes</span>
+                      <img src="assets/images/icons/redis.svg" alt="Redis" />
+                      <span>Redis</span>
                     </div>
                     <div class="tech-item">
-                      <img src="assets/images/icons/jenkins.svg" alt="Jenkins" />
-                      <span>Jenkins</span>
+                      <img src="assets/images/icons/mariadb.svg" alt="MariaDB" />
+                      <span>MariaDB</span>
                     </div>
                     <div class="tech-item">
-                      <img src="assets/images/icons/nginx.svg" alt="Nginx" />
-                      <span>Nginx</span>
-                    </div>
-                    <div class="tech-item">
-                      <img src="assets/images/icons/aws.svg" alt="AWS" />
-                      <span>AWS</span>
+                      <img src="assets/images/icons/fastapi.svg" alt="FastAPI" />
+                      <span>FastAPI</span>
                     </div>
                     <div class="tech-item">
                       <img src="assets/images/icons/docker.svg" alt="Docker" />
@@ -339,11 +335,16 @@
                 <div class="project-desc">
                   <h4>DevOps 핵심 기여</h4>
                   <ul>
-                    <li><strong>Kubernetes 실전 도입</strong>: AWS EC2에서 Kubernetes(K8s) 첫 실전 적용, 컨트롤 플레인과 워커 노드를 단일 EC2에서 효율적으로 구성하고, 이벤트 기반 사용자별 FastAPI AI Agent Pod의 자동 스케일링 구현</li>
-                    <li><strong>CI/CD 파이프라인 확장</strong>: Jenkins + GitLab + Docker 기반 파이프라인을 Kubernetes로 확장</li>
-                    <li><strong>컨테이너 레지스트리 활용</strong>: Docker Hub를 통한 이미지 관리 및 자동 배포</li>
-                    <li><strong>보안 및 인프라 구성</strong>: Nginx 리버스 프록시, HTTPS 인증서, 도메인 연동으로 보안 강화</li>
-                    <li><strong>개발 환경 표준화</strong>: docker-compose.override.yml 및 .env 파일(Jenkins Credential 연동)로 환경 변수 관리, 개발·운영 환경 일관성 유지</li>
+                    <li>
+                      <strong>컨테이너화 및 하이브리드 환경 구성</strong>:
+                      온디바이스(Jetson)와 웹(PC) 각각의 서비스 환경을 컨테이너로 분리하여 관리하고,
+                      Docker 네트워크를 통해 두 환경 간 통신을 구현
+                    </li>
+                    <li>
+                      <strong>분산 환경 표준화 및 신속 배포</strong>:
+                      Jetson(온디바이스)와 PC(웹) 각각에서 docker-compose로 여러 서비스를 한 번에 일관되게 실행, 환경 재현 및 확장 용이
+                    </li>
+                    <li><strong>환경 설정 표준화</strong>: .env 파일로 환경 변수 및 설정 분리, 개발 환경 일관성 유지</li>
                   </ul>
                 </div>
               </div>
@@ -608,6 +609,11 @@
               <td>SQLD</td>
               <td>-</td>
               <td>24.09.20</td>
+            </tr>
+            <tr>
+              <td>ADSP</td>
+              <td>-</td>
+              <td>25.06.13</td>
             </tr>
             <tr>
               <td>OPIC</td>
